@@ -1,0 +1,9 @@
+{
+  "name": "Acl",
+  "version": "0.0.1",
+  "main": "server.js",
+  "description": "Very simple acl module using in app memory and MongoDB",
+  "dependencies": {
+    "mongoose": "^4.1.8"
+  }
+}
