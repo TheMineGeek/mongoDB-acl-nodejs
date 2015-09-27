@@ -6,7 +6,7 @@ function Acl() {
 
 function Role(name) {
 	this.name = name || "NoName";
-	this.ressources = []
+	this.ressources = [];
 }
 
 function Ressource(name) {
