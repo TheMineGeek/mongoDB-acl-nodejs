@@ -8,10 +8,11 @@ I create this module cause I was needing a very simple Acl module using MongoDB
 
 *Acl.init(options, callback)*
 
-*options* : **Object** use to connect to your mongo database
-	* dbAddress : **String**, Database address
-	* port : **Int/String**, port used by database
-	* dbName : **String**, Database name
+*options* : **Object** use to connect to your mongo database :
+	- *dbAddress* : **String**, Database address
+	- *port* : **Int/String**, port used by database
+	- *dbName* : **String**, Database name
+	
 *callback* : **(optional)** function called when you are connected to the database
 
 
