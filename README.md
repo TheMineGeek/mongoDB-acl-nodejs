@@ -6,28 +6,33 @@ I create this module cause I was needing a very simple Acl module using MongoDB
 
 # Function explanations
 
+------
 *Acl.init(options, callback)*
 
-*options* : **Object** use to connect to your mongo database :
-	- *dbAddress* : **String**, Database address
-	- *port* : **Int/String**, port used by database
-	- *dbName* : **String**, Database name
-	
+-*options* : **Object** use to connect to your mongo database :
+
+ - *dbAddress* : **String**, Database address
+ - *port* : **Int/String**, port used by database
+ - *dbName* : **String**, Database name
+
 *callback* : **(optional)** function called when you are connected to the database
 
 
+------
 *Acl.addRole(roleName, callback)*
 
 *roleName* : **String**, name of the new role
 *callback* : *callback* : **(optional)** function called when new role is added
 
 
+------
 *Acl.addRessource(ressourceName, callback)*
 
 *ressourceName* : **String**, name of the new ressource
 *callback* : *callback* : **(optional)** function called when new ressource is added
 
 
+------
 *Acl.addPermission(ressource, permissionName, state, callback)*
 
 *ressource* : **String**, name of the ressource where is added new permission
@@ -35,6 +40,7 @@ I create this module cause I was needing a very simple Acl module using MongoDB
 *state* : **String**, default state of the permission
 *callback* :*callback* : **(optional)** function called when new permission is added
 
+------
 *Acl.inherit(heir, parent, callback)*
 
 *heir* : **String** inheriting role
@@ -42,6 +48,7 @@ I create this module cause I was needing a very simple Acl module using MongoDB
 *callback* : **(optional)** function called when role has been inherited
 
 
+------
 *Acl.getRole(roleName, callback)*
 
 *roleName* : **String**, role wanted
@@ -49,7 +56,7 @@ I create this module cause I was needing a very simple Acl module using MongoDB
 
 return role corresponding to the *roleName*
 
-
+------
 *Acl.getRessource(roleName, ressourceName, callback)*
 
 *roleName* : **String**, role where is the wanted ressource
@@ -58,7 +65,7 @@ return role corresponding to the *roleName*
 
 return ressource corresponding to the *ressourceName* in the *roleName*
 
-
+------
 *Acl.can(roleName, ressourceName, permissionName, callback)*
 
 *roleName* : **String**, role where is the wanted permission
@@ -68,12 +75,14 @@ return ressource corresponding to the *ressourceName* in the *roleName*
 
 return state of the permission
 
-
+------
 *Acl.save(roleName, callback)*
 
 *roleName* : **String**, name of the role you want to save. If equals to "", it saves all roles
 *callback* : **(optional)** function called when role(s) is/are saved
 
+
+------
 *Acl.load(callback)*
 
 *callback* : **(optional)** function called when all roles are retrieved from database
