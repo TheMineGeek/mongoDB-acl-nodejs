@@ -1,6 +1,6 @@
 {
   "name": "acl-mongodb-local",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "js/acl.js",
   "description": "Very simple acl module using in app memory and MongoDB",
   "dependencies": {
