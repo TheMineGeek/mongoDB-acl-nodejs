@@ -21,7 +21,14 @@ describe("First thing to do", function () {
 });
 
 describe("Test function of Acl", function () {
-
+	it.skip("should remove a Role", function (done) {
+		Acl.removeRole("master", function (err) {
+			if (err)
+				console.log(err);
+			done();
+		});
+	});
+	
 	it("should add a new Role", function (done) {
 		Acl.addRole("master", function (err) {
 			if (err) {
@@ -31,18 +38,38 @@ describe("Test function of Acl", function () {
 				done();
 			}
 		});
+	});	
+	
+	it("should add a new Role", function (done) {
+		Acl.addRole("admin", function (err) {
+			if (err) {
+				console.log(err);
+				done();
+			} else {
+				done();
+			}
+		});
+	});	
+	
+	it.skip("should remove a Ressource", function (done) {
+		Acl.removeRessource("media", function (err) {
+			if (err)
+				console.log(err);
+			done();
+		});
 	});
+
 	it("should add a new Ressource", function (done) {
-		Acl.addRessource("media", function (err) {
+		Acl.addRessource("mediaa", function (err) {
 			if (err) {
 				console.log(err);
 			}
 			done();
 		});
 	});
-
+	
 	it("should add a new Permission", function (done) {
-		Acl.addPermission("media", "addMovies", true, function (err) {
+		Acl.addPermission("mediaa", "addMovies", true, function (err) {
 			if (err)
 				console.log(err);
 			done();
@@ -67,24 +94,32 @@ describe("Test function of Acl", function () {
 
 	it("should inherit work", function (done) {
 		Acl.addRole("admin");
-		Acl.inherit("admin", "master", function(err) {
-			if(err)
+		Acl.inherit("admin", "master", function (err) {
+			if (err)
 				console.log(err);
 			done();
 		});
 		assert.equal(Acl.can("admin", "media", "addMovie"), true);
 	});
-	
+
 	it("sould return master role", function () {
 		Acl.getRole("master");
 	});
-	
+
 	it("should return media ressource of master", function () {
 		Acl.getRessource("master", "media");
 	});
-	
+
 	it("should save infos", function (done) {
 		Acl.save("", function () {
+			done();
+		});
+	});
+	
+	it("should remove a Permission", function (done) {
+		Acl.removePermission("addMovie", function (err) {
+			if (err)
+				console.log(err);
 			done();
 		});
 	});
