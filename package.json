@@ -1,19 +1,26 @@
 {
   "name": "acl-mongodb-local",
   "version": "1.0.2",
-  "main": "js/acl.js",
+  "main": "./lib/acl",
   "description": "Very simple acl module using in app memory and MongoDB",
   "dependencies": {
     "mongoose": "^4.1.8"
   },
   "scripts": {
-    "test": "mocha"  
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:TheMineGeek/mongoDB-acl-nodejs.git"
   },
   "keywords": [
-    "acl", "mongo", "mongodb", "local", "local-acl", "acl-local", "mongodb-acl", "acl-mongodb"
+    "acl",
+    "mongo",
+    "mongodb",
+    "local",
+    "local-acl",
+    "acl-local",
+    "mongodb-acl",
+    "acl-mongodb"
   ]
 }
